@@ -26,7 +26,7 @@ for j=1:length(info)
     wvfm(j).phase = info(j).flag;
 
     dur=2^nextpow2(wvfm(j).dur_sec/wvfm(j).delta_sec);
-    temp=info(j).dur_sec*(0:dur-1);
+    temp=info(j).delta_sec*(0:dur-1);
     wvfm(j).time=temp';
     K= ceil(info(j).lenplt_sec/wvfm(j).delta_sec)+1;
     wvfm(j).wvlen_sec=info(j).wvlen_sec;
